@@ -1,3 +1,12 @@
+/////////////////////////////////////////////////
+// Navigation toggle
+const navLink = document.getElementById("btnNav");
+const btnNav = document.querySelector(".navigation__button");
+
+btnNav.addEventListener("click", function () {
+  navLink.classList.toggle("nav-toggle");
+});
+
 //////////////////////////////////////////////////
 // Building a Slider Component
 // Slider
@@ -6,6 +15,7 @@ const slider = function () {
   const btnLeft = document.querySelector(".slider__btn--left");
   const btnRight = document.querySelector(".slider__btn--right");
   const dotContainer = document.querySelector(".dots");
+  const dots = document.querySelector(".dots__dot");
 
   let curSlide = 0;
   const maxSlide = slides.length - 1;
