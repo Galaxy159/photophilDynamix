@@ -970,7 +970,7 @@ body {
 
 .slide > img {
   /* Only for images that have different size than slide */
-  width: 60%;
+  width: 75%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -1059,8 +1059,8 @@ body {
   opacity: 1;
 }
 
-#fullpage {
-  display: none;
+.fullpage {
+  display: block;
   position: fixed;
   z-index: 9999;
   top: 0;
@@ -1068,8 +1068,8 @@ body {
   width: 100vw;
   height: 100vh;
   background-size: contain;
-  background-repeat: no-repeat no-repeat;
-  background-position: center center;
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: black;
 }
 
