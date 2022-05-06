@@ -1,10 +1,21 @@
 /////////////////////////////////////////////////
 // Navigation toggle
 const navLink = document.getElementById("btnNav");
+const navBackground = document.getElementById("backgroundNav");
 const btnNav = document.querySelector(".navigation__button");
+const naviToggle = document.getElementById("navi-toggle");
 
 btnNav.addEventListener("click", function () {
-  navLink.classList.toggle("nav-toggle");
+  navLink.classList.toggle("navigation__nav--toggle");
+  navBackground.classList.remove("navigation__background--hide");
+  navLink.classList.remove("navigation__nav--hide");
+});
+
+navLink.addEventListener("click", function () {
+  navLink.classList.toggle("navigation__nav--toggle");
+  navLink.classList.add("navigation__nav--hide");
+  navBackground.classList.add("navigation__background--hide");
+  naviToggle.checked = false;
 });
 
 //////////////////////////////////////////////////
