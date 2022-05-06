@@ -1292,6 +1292,10 @@ body {
   }
 }
 
+.navigation__nav--toggle {
+  pointer-events: none;
+}
+
 .navigation__nav {
   height: 100vh;
   position: fixed;
@@ -1355,6 +1359,16 @@ body {
   width: 100%;
 }
 
+.navigation__nav--hide {
+  opacity: 0 !important;
+  width: 0 !important;
+}
+
+.navigation__background--hide {
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
+}
+
 .navigation__icon {
   position: relative;
   margin-top: 3.5rem;
@@ -1405,10 +1419,6 @@ body {
   top: 0;
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
-}
-
-.nav-toggle {
-  pointer-events: none;
 }
 
 .section-about {
