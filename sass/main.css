@@ -1035,6 +1035,18 @@ body {
           justify-content: center;
 }
 
+@media (max-width: 37.5em) {
+  .dots {
+    bottom: 25%;
+  }
+}
+
+@media (max-width: 26.875em) {
+  .dots {
+    bottom: 40%;
+  }
+}
+
 .dots__dot {
   border: none;
   background-color: #b9b9b9;
