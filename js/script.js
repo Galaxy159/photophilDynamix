@@ -23,20 +23,22 @@ navLink.addEventListener("click", function () {
 // Slider
 const slider = function () {
   const slides = document.querySelectorAll(".slide");
+  const slider = document.getElementById("slider");
   const btnLeft = document.querySelector(".slider__btn--left");
   const btnRight = document.querySelector(".slider__btn--right");
   const dotContainer = document.querySelector(".dots");
-  const dots = document.querySelector(".dots__dot");
 
+  // FULL SCREEN MODE
   const imgs = document.querySelectorAll(".slide img");
-  const fullPage = document.querySelector("#fullpage");
+  // const fullPage = document.querySelector("fullpage");
 
   imgs.forEach((img) => {
     img.addEventListener("click", function () {
-      fullPage.style.backgroundImage = "url(" + img.src + ")";
-      fullPage.style.display = "block";
+      slider.classList.toggle("fullpage");
     });
   });
+
+  // SLIDE MECHANISM
 
   let curSlide = 0;
   const maxSlide = slides.length - 1;
