@@ -28,6 +28,16 @@ const slider = function () {
   const dotContainer = document.querySelector(".dots");
   const dots = document.querySelector(".dots__dot");
 
+  const imgs = document.querySelectorAll(".slide img");
+  const fullPage = document.querySelector("#fullpage");
+
+  imgs.forEach((img) => {
+    img.addEventListener("click", function () {
+      fullPage.style.backgroundImage = "url(" + img.src + ")";
+      fullPage.style.display = "block";
+    });
+  });
+
   let curSlide = 0;
   const maxSlide = slides.length - 1;
 
