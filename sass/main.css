@@ -527,6 +527,11 @@ body {
   transition: all 0.3s;
 }
 
+.features-container__feature-box:hover {
+  -webkit-transform: translateY(-1.5rem) scale(1.03);
+          transform: translateY(-1.5rem) scale(1.03);
+}
+
 @media (max-width: 56.25em) {
   .features-container__feature-box {
     padding: 1.6rem;
@@ -560,11 +565,6 @@ body {
   .features-container__feature-box--icon {
     margin-bottom: 0;
   }
-}
-
-.features-container__feature-box--icon:hover {
-  -webkit-transform: translateY(-1.5rem) scale(1.03);
-          transform: translateY(-1.5rem) scale(1.03);
 }
 
 .card {
@@ -793,8 +793,20 @@ body {
   padding: 3rem;
 }
 
+@media (max-width: 26.875em) {
+  .team-member__img {
+    height: 50vh;
+  }
+}
+
 .team-member__text {
   font-size: 2rem;
+}
+
+@media (max-width: 26.875em) {
+  .team-member__text {
+    font-size: 1.8rem;
+  }
 }
 
 .bg-video {
@@ -944,7 +956,6 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -959,20 +970,6 @@ body {
   transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
-}
-
-@media (max-width: 37.5em) {
-  .slide {
-    width: 100vw;
-    height: 30rem;
-  }
-}
-
-@media (max-width: 26.875em) {
-  .slide {
-    width: 100vw;
-    height: 25rem;
-  }
 }
 
 .slide > img {
@@ -1049,18 +1046,6 @@ body {
   transition: all 0.5s;
   /* Only necessary when overlying images */
   /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
-}
-
-@media (max-width: 37.5em) {
-  .dots__dot {
-    margin-top: -35vh;
-  }
-}
-
-@media (max-width: 26.875em) {
-  .dots__dot {
-    margin-top: -40vh;
-  }
 }
 
 .dots__dot:last-child {
