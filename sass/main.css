@@ -118,6 +118,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
 }
 
