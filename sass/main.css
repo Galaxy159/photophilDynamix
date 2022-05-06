@@ -553,12 +553,7 @@ body {
   font-size: 6rem;
   margin-bottom: 0.5rem;
   display: inline-block;
-  background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  color: #55c57a;
 }
 
 @media (max-width: 56.25em) {
