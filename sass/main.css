@@ -934,7 +934,7 @@ body {
 .img-slider {
   position: relative;
   width: 80rem;
-  height: 50rem;
+  height: 54rem;
   margin: 0 auto;
   background: #1d212b;
 }
@@ -1017,7 +1017,7 @@ body {
 @media (max-width: 56.25em) {
   .img-slider {
     width: 60rem;
-    height: 37.5rem;
+    height: 41rem;
   }
   .img-slider .slide .info {
     padding: 1rem 2.5rem;
@@ -1041,8 +1041,8 @@ body {
 
 @media (max-width: 37.5em) {
   .img-slider {
-    width: 40rem;
-    height: 25rem;
+    width: 56rem;
+    height: 36rem;
   }
   .img-slider .slide .info {
     padding: 1rem 2rem;
@@ -1066,8 +1066,8 @@ body {
 
 @media (max-width: 26.875em) {
   .img-slider {
-    width: 32rem;
-    height: 20rem;
+    width: 40rem;
+    height: 26rem;
   }
   .img-slider .slide .info {
     padding: 0.5rem 1rem;
