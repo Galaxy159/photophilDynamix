@@ -1543,6 +1543,7 @@ body {
   position: relative;
   background-color: #f7f7f7;
   padding: 10rem 0 15rem 0;
+  overflow: hidden;
 }
 
 .section-team {
