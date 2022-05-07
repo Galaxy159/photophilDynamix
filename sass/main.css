@@ -942,7 +942,7 @@ body {
 .slider {
   width: 100vw;
   height: 55rem;
-  margin: 0 auto;
+  margin: auto;
   /* IN THE END */
   overflow: hidden;
 }
