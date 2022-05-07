@@ -783,19 +783,31 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+@media (max-width: 37.5em) {
+  .team-member {
+    width: 100%;
+  }
 }
 
 .team-member__img {
   padding: 3rem;
+  -webkit-clip-path: circle(40% at 50% 50%);
+          clip-path: circle(40% at 50% 50%);
 }
 
-@media (max-width: 26.875em) {
+@media (max-width: 37.5em) {
   .team-member__img {
-    height: 50vh;
+    padding: 0;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 
 .team-member__text {
+  padding-right: 1rem;
   font-size: 2rem;
 }
 
