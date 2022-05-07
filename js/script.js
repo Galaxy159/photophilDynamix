@@ -38,6 +38,55 @@ const slider = function () {
     });
   });
 
+  // TOUCH SURFACE MECHANISM
+
+  let touchstartX = 0;
+  let touchstartY = 0;
+  let touchendX = 0;
+  let touchendY = 0;
+
+  const slidesTouchArea = document.getElementById("slidesTouchArea");
+
+  slidesTouchArea.addEventListener(
+    "touchstart",
+    function (event) {
+      touchstartX = event.screenX;
+      touchstartY = event.screenY;
+    },
+    false
+  );
+
+  slidesTouchArea.addEventListener(
+    "touchend",
+    function (event) {
+      touchendX = event.screenX;
+      touchendY = event.screenY;
+      handleTouch();
+    },
+    false
+  );
+
+  function handleTouch() {
+    var swiped = "swiped: ";
+    if (touchendX < touchstartX) {
+      alert(swiped + "left!");
+      nextSlide();
+    }
+    if (touchendX > touchstartX) {
+      alert(swiped + "right!");
+      prevSlide();
+    }
+    if (touchendY < touchstartY) {
+      alert(swiped + "down!");
+    }
+    if (touchendY > touchstartY) {
+      alert(swiped + "left!");
+    }
+    if (touchendY == touchstartY) {
+      alert("tap!");
+    }
+  }
+
   // SLIDE MECHANISM
 
   let curSlide = 0;
