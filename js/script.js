@@ -39,53 +39,32 @@ const slider = function () {
   });
 
   // TOUCH SURFACE MECHANISM
-
-  let touchstartX = 0;
-  let touchstartY = 0;
-  let touchendX = 0;
-  let touchendY = 0;
-
   const slidesTouchArea = document.getElementById("slidesTouchArea");
 
   slidesTouchArea.addEventListener(
-    "touchstart",
-    function (event) {
-      touchstartX = event.screenX;
-      touchstartY = event.screenY;
+    "touchmove",
+    function (e) {
+      e.preventDefault(); // prevent scrolling when inside DIV
     },
     false
   );
 
-  slidesTouchArea.addEventListener(
-    "touchend",
-    function (event) {
-      touchendX = event.screenX;
-      touchendY = event.screenY;
-      handleTouch();
-    },
-    false
-  );
+  let touchstartX = 0;
+  let touchendX = 0;
 
-  function handleTouch() {
-    var swiped = "swiped: ";
-    if (touchendX < touchstartX) {
-      alert(swiped + "left!");
-      nextSlide();
-    }
-    if (touchendX > touchstartX) {
-      alert(swiped + "right!");
-      prevSlide();
-    }
-    if (touchendY < touchstartY) {
-      alert(swiped + "down!");
-    }
-    if (touchendY > touchstartY) {
-      alert(swiped + "left!");
-    }
-    if (touchendY === touchstartY) {
-      alert("tap!");
-    }
+  function handleGesture() {
+    if (touchendX < touchstartX) nextSlide();
+    if (touchendX > touchstartX) prevSlide();
   }
+
+  slidesTouchArea.addEventListener("touchstart", (e) => {
+    touchstartX = e.changedTouches[0].screenX;
+  });
+
+  slidesTouchArea.addEventListener("touchend", (e) => {
+    touchendX = e.changedTouches[0].screenX;
+    handleGesture();
+  });
 
   // SLIDE MECHANISM
 
