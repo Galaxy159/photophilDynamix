@@ -21,9 +21,12 @@ navLink.addEventListener("click", function () {
 //////////////////////////////////////////////////
 // Building a Slider Component
 // Slider
+
 const slider = function () {
-  const slides = document.querySelectorAll(".slide");
   const slider = document.getElementById("slider");
+  const slides = document.querySelectorAll(".slide");
+  const sliderBtnLeft = document.getElementById("sliderBtnLeft");
+  const sliderBtnRight = document.getElementById("sliderBtnRight");
   const btnLeft = document.querySelector(".slider__btn--left");
   const btnRight = document.querySelector(".slider__btn--right");
   const dotContainer = document.querySelector(".dots");
@@ -35,6 +38,8 @@ const slider = function () {
   imgs.forEach((img) => {
     img.addEventListener("click", function () {
       slider.classList.toggle("fullpage");
+      sliderBtnLeft.classList.toggle("hidden");
+      sliderBtnRight.classList.toggle("hidden");
     });
   });
 
