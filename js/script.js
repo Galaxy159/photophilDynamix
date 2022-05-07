@@ -41,13 +41,13 @@ const slider = function () {
   // TOUCH SURFACE MECHANISM
   const slidesTouchArea = document.getElementById("slidesTouchArea");
 
-  slidesTouchArea.addEventListener(
-    "touchmove",
-    function (e) {
-      e.preventDefault(); // prevent scrolling when inside DIV
-    },
-    false
-  );
+  // slidesTouchArea.addEventListener(
+  //   "touchmove",
+  //   function (e) {
+  //     e.preventDefault(); // prevent scrolling when inside DIV
+  //   },
+  //   false
+  // );
 
   let touchstartX = 0;
   let touchendX = 0;
