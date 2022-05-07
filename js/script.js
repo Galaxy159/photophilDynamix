@@ -82,9 +82,8 @@ const slider = function () {
     if (touchendY > touchstartY) {
       alert(swiped + "left!");
     }
-    if (touchendY == touchstartY) {
+    if (touchendY === touchstartY) {
       alert("tap!");
-      nextSlide();
     }
   }
 
