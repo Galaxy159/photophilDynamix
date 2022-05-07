@@ -84,6 +84,7 @@ const slider = function () {
     }
     if (touchendY == touchstartY) {
       alert("tap!");
+      nextSlide();
     }
   }
 
