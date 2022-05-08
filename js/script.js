@@ -38,6 +38,7 @@ const slider = function () {
   imgs.forEach((img) => {
     img.addEventListener("click", function () {
       slider.classList.toggle("fullpage");
+
       // sliderBtnLeft.classList.toggle("hidden");
       // sliderBtnRight.classList.toggle("hidden");
     });
